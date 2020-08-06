@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.service.codingtest.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cb_favorite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/checkbox_favorite"
+                android:button="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/cardview_shadow_start_color"
+                android:gravity="center_vertical"
+                android:paddingRight="50dp"
+                android:paddingLeft="5dp"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tool:text="충청북도의 중심에 위치하고 인삼과 홍삼이 있어 건강한 도시 좌구산과, 보강천이 있어 레저와 휴양을 마음껏 누릴 수 있는 고장" />
+
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="@id/tv_title"
+                app:layout_constraintRight_toRightOf="parent"
+                tool:text="10.0" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tool:text="2020-07-02 00:00:00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
